@@ -34,6 +34,15 @@ The following directories are present in the project directory:
 
 You can explore the music library, add tracks to your favorites, register, log in, and manage your playlist once you've accessed the API. Logging in with admin privileges will allow you to manage artists, albums, tracks, and user accounts.
 
+### Running the API locally
+
+```
+cd music-library-api
+npm install
+npm run dev
+```
+This command starts `src/server.js` via nodemon and serves the REST endpoints on the configured port.
+
 
 ## Principal Technology
 
