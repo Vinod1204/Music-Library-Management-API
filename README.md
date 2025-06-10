@@ -43,12 +43,23 @@ npm run dev
 ```
 This command starts `src/server.js` via nodemon and serves the REST endpoints on the configured port.
 
+### Frontend configuration
+
+Create a `.env` file inside `music-library-frontend` and specify your API URL:
+
+```
+REACT_APP_API_URL=https://api.example.com/api
+```
+
+The React app falls back to `http://localhost:5000/api` when this variable is not set.
+
 
 ## Principal Technology
 
-**Back-end**: Node.js, Express.js, MongoDB 
+**Back-end**: Node.js, Express.js, MongoDB
 **Package and Tool Management**: npm, Git
 **Front-end**: React.js, HTML, CSS, JavaScript
+**Security Middleware**: Helmet (recommended)
 
 
 
