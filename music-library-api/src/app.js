@@ -5,7 +5,6 @@ const albumRoutes = require('./routes/albumRoutes');
 const trackRoutes = require('./routes/trackRoutes');
 const authRoutes = require('./routes/authRoutes');
 const app = express();
-console.log('connectDB:', connectDB);
 connectDB();
 app.use(express.json());
 
