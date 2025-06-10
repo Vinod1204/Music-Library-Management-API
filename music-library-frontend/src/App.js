@@ -4,21 +4,14 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Login from './pages/Login';
 
-const App = () => ( <
-    Router >
-    <
-    Navbar / >
-    <
-    Routes >
-    <
-    Route path = "/"
-    element = { < Home / > }
-    /> <
-    Route path = "/login"
-    element = { < Login / > }
-    /> <
-    /Routes> <
-    /Router>
+const App = () => (
+  <Router>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
+  </Router>
 );
 
 export default App;
