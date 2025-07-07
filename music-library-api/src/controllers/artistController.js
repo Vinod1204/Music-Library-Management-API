@@ -1,4 +1,5 @@
 const Artist = require('../models/Artist');
+const { v4: uuidv4 } = require('uuid');
 
 exports.getArtists = async(req, res) => {
     try {
@@ -12,7 +13,7 @@ exports.getArtists = async(req, res) => {
 exports.createArtist = async(req, res) => {
     try {
         const { name } = req.body;
-        const newArtist = new Artist({ name });
+        const newArtist = new Artist({ artist_id: uuidv4(), name });
         await newArtist.save();
         res.json(newArtist);
     } catch (err) {
