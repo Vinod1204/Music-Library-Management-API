@@ -43,6 +43,14 @@ npm run dev
 ```
 This command starts `src/server.js` via nodemon and serves the REST endpoints on the configured port.
 
+Create a `.env` file inside `music-library-api` with your connection details:
+
+```
+MONGO_URI=mongodb://localhost:27017/musiclibrary
+JWT_SECRET=your-secret
+```
+`MONGO_URI` is optional. When omitted, the API defaults to `mongodb://localhost:27017/musiclibrary`.
+
 ### Frontend configuration
 
 Create a `.env` file inside `music-library-frontend` and specify your API URL:
