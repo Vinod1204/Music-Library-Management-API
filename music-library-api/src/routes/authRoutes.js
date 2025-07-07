@@ -1,18 +1,11 @@
 const express = require('express');
+const { signup, login } = require('../controllers/authController');
 const router = express.Router();
-const jwt = require('jsonwebtoken');
 
-router.post('/login', async(req, res) => {
-    const { username, password } = req.body;
+// Register a new user
+router.post('/signup', signup);
 
-    // Replace this with your actual user authentication logic
-    if (username === 'admin' && password === 'password') {
-        const payload = { user: { id: 'adminId' } };
-        const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
-        return res.json({ token });
-    }
-
-    res.status(401).json({ msg: 'Invalid credentials' });
-});
+// Authenticate user and return token
+router.post('/login', login);
 
 module.exports = router;
